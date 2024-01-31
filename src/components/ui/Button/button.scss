@@ -1,0 +1,64 @@
+@import "@/index.scss";
+.btn {
+  padding: 1.2rem 3rem;
+  display: flex;
+  font-size: 1.8rem;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  font-weight: 500;
+  border-radius: 100rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn.primary {
+  background-color: $color-blue;
+  border: 2px solid transparent;
+  color: $color-white;
+  &:hover {
+    background-color: $color-blue-2;
+  }
+}
+.btn.outline {
+  background-color: transparent;
+  color: $color-blue;
+  border: 2px solid $color-blue;
+  &:hover {
+    border: 2px solid $color-blue-2;
+    color: $color-blue-2;
+  }
+}
+.btn-overflow {
+  position: relative;
+  &:hover &__icon--1 {
+    translate: 0;
+    opacity: 1;
+  }
+  &:hover &__icon--2 {
+    translate: 0 200%;
+    opacity: 0;
+  }
+  &__icon {
+    font-size: 2rem;
+    transition: 0.2s;
+    &--1 {
+      translate: 0 -200%;
+      opacity: 0;
+      position: absolute;
+      right: 3rem;
+    }
+    &--2 {
+      translate: 0;
+      opacity: 1;
+    }
+  }
+}
+.btn-expand {
+  gap: 1rem;
+  &:hover {
+    gap: 2rem;
+  }
+  &__icon {
+    font-size: 2rem;
+  }
+}

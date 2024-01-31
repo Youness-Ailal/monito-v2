@@ -1,0 +1,106 @@
+@import "@/index.scss";
+.category {
+  position: absolute;
+  top: 5rem;
+  right: 50%;
+  width: min(100%, 150rem);
+  padding: 0 2rem;
+  translate: 50% 0;
+  z-index: 9999;
+  transition: all 0.2s ease;
+  &__container {
+    margin-top: 5rem;
+    background-color: $color-white;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5rem 3rem rgba(0, 0, 0, 0.15);
+  }
+
+  &__lists {
+    display: flex;
+    gap: 10rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      column-gap: 2.6rem;
+      max-height: 22rem;
+    }
+  }
+  &__title-link {
+    font-size: 2rem;
+    color: $color-blue;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 1rem;
+    transition: all 0.2s;
+    padding: 0.5rem 1.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid $color-blue-light;
+      text-shadow: 0 0 1px currentColor;
+    }
+
+    &--icon {
+      font-size: 1.8rem;
+      transition: 0.1s;
+    }
+    &:hover &--icon {
+      translate: 0.5rem 0;
+    }
+  }
+
+  &__link {
+    padding: 0.4rem 1.2rem;
+    font-size: 1.6rem;
+    gap: 0.5rem;
+    color: $color-text;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid transparent;
+    transition: 0.1s;
+    &:hover {
+      color: $color-blue-dark;
+      text-shadow: 0 0 1px currentColor;
+      border: 1px solid $color-blue-light;
+      border-radius: 0.5rem;
+    }
+    &:hover &--icon {
+      opacity: 1;
+      translate: 0;
+    }
+    &--icon {
+      opacity: 0;
+      translate: -2rem 0;
+      transition: 0.1s;
+    }
+  }
+  &__image {
+    img {
+      width: 35rem;
+      background-color: $color-green-light;
+      border-radius: 1.4rem;
+      overflow: hidden;
+    }
+  }
+}
+
+// .hidden-category {
+//   opacity: 0;
+//   pointer-events: none;
+//   user-select: none;
+//   translate: 0 -5rem;
+// }

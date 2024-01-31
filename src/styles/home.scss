@@ -1,0 +1,43 @@
+.home {
+  border-radius: 0 0 4rem 4rem;
+  background: linear-gradient(
+    134deg,
+    #e6fcf5 6.17%,
+    #c3fae8 75.14%,
+    #c3fae8 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+
+  &::after {
+    content: "";
+    height: 65rem;
+    width: 65rem;
+    background-color: #63e6be;
+    display: block;
+    position: absolute;
+    top: -85%;
+    left: -12%;
+    z-index: 0;
+    border-radius: 10rem;
+    transform: rotate(20deg);
+  }
+  &::before {
+    content: "";
+    height: 65rem;
+    width: 65rem;
+    background-color: #96f2d7;
+    display: block;
+    position: absolute;
+    bottom: -82%;
+    left: 0%;
+    z-index: 0;
+    border-radius: 10rem;
+    transform: rotate(60deg);
+    filter: blur(0.2rem);
+  }
+}

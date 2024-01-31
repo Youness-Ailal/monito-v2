@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../public/fonts/Gilroy-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../public/fonts/Gilroy-Light.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../public/fonts/Gilroy-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../public/fonts/Gilroy-SemiBold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../public/fonts/Gilroy-Bold.otf");
+  font-weight: 700 800;
+}
+
+$color-bg: #fff;
+$color-white: #fdfdfd;
+
+$color-text: #242b33;
+
+$color-blue: #003459;
+$color-blue-light: #005694;
+$color-blue-dark: #002742;
+$color-blue-2: #0b7285;
+$color-blue-rgb: 24, 100, 171;
+
+$color-red: #ff6b6b;
+
+$color-male: #339af0;
+$color-female: #d6336c;
+
+$color-green: #63e6be;
+$color-green-dark: #20c997;
+$color-green-light: #96f2d7;
+
+$radius-tiny: 2px;
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 10px;
+
+$shadow-base: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+
+$section-space: 15vh;
+
+::selection {
+  background-color: rgba(32, 201, 151, 0.5);
+  color: $color-blue;
+}
+/*************** Global reset ********************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: clamp(8px, 1vw, 10px);
+}
+
+body {
+  font-family: "SVN-Gilroy", sans-serif;
+  background-color: $color-bg;
+  color: #000;
+  line-height: 1.5;
+  font-weight: 400;
+  min-height: 100dvh;
+  position: relative;
+  overflow-x: hidden;
+}
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button,
+a {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 0.2rem;
+  transition: 0s;
+}
+button {
+  cursor: pointer;
+  &:active {
+    scale: 0.98;
+  }
+}
+/***********************************/
+
+.heading-1 {
+  font-size: 7rem;
+  color: $color-blue;
+
+  @media (max-width: 450px) {
+    font-size: 6rem;
+  }
+}
+.heading-2 {
+  font-size: 4.5rem;
+  color: $color-blue;
+  @media (max-width: 450px) {
+    font-size: 3.5rem;
+  }
+}
+.heading-3 {
+  font-size: 3rem;
+  color: $color-blue;
+}
+.heading-4 {
+  font-size: 2rem;
+  color: $color-blue;
+}
+.heading-5 {
+  font-size: 1.5rem;
+  color: $color-blue;
+}
+.paragraph {
+  font-size: 1.8rem;
+  color: $color-blue-dark;
+  font-weight: 400;
+}
+
+/***********************************/
+/***********************************/
+@keyframes shape-rotate-1 {
+  0% {
+    opacity: 0;
+    transform: rotate(50deg) translate(50rem, 15rem);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(20deg) translate(0, 0);
+  }
+}
+@keyframes shape-rotate-2 {
+  0% {
+    opacity: 0;
+    transform: rotate(10deg) translate(50rem, 15rem);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(3deg) translate(0, 0);
+  }
+}
+@keyframes move-img {
+  0% {
+    opacity: 0;
+    transform: translateY(50rem);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes go-up {
+  0% {
+    opacity: 0;
+    transform: rotate(60deg) translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(60deg) translateY(0);
+  }
+}
+@keyframes hero {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes carti {
+  0% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-0.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
