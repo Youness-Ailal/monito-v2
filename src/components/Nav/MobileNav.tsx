@@ -1,7 +1,7 @@
 import { IoMdHeartEmpty } from "react-icons/io";
 import { RiMenu2Fill } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
-import Cart from "../Cart";
+import Cart from "../../features/Cart";
 import { createPortal } from "react-dom";
 import { forwardRef, useRef } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
@@ -85,8 +85,27 @@ const MobileNavLinks = forwardRef<HTMLElement>(function MobileNavLinks(
             </NavLink>
           </li>
           <li className="header__item-mobile">
-            <NavLink onClick={onHideNav} to="/" className="header__link-mobile">
-              Category
+            <NavLink
+              onClick={onHideNav}
+              to="/popular-dogs"
+              className="header__link-mobile">
+              Popular
+            </NavLink>
+          </li>
+          <li className="header__item-mobile">
+            <NavLink
+              onClick={onHideNav}
+              to="/large-dogs"
+              className="header__link-mobile">
+              Larg Dogs
+            </NavLink>
+          </li>
+          <li className="header__item-mobile">
+            <NavLink
+              onClick={onHideNav}
+              to="/small-dogs"
+              className="header__link-mobile">
+              Small Dogs
             </NavLink>
           </li>
         </ul>

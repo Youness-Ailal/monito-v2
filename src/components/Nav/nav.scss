@@ -1,15 +1,19 @@
 @import "@/index.scss";
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 999;
   display: flex;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
   justify-content: space-around;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(15px);
   gap: 1rem;
-  padding: 2.4rem 6rem;
+  padding: 1.8rem 6rem;
   margin-bottom: 5rem;
-  position: relative;
+  // position: relative;
 
   &__logo {
     height: 4rem;
@@ -19,7 +23,7 @@
     color: $color-blue;
     transition: 0.2s;
     &:hover {
-      color: $color-red;
+      color: $color-blue-2;
     }
   }
 
@@ -94,7 +98,7 @@
     justify-content: space-between;
   }
   &__menu {
-    font-size: 5rem;
+    font-size: 4rem;
     color: $color-blue;
     &--close {
       align-self: end;
@@ -126,7 +130,7 @@
     }
   }
   &__link-mobile {
-    font-size: 4rem;
+    font-size: 3rem;
     border-bottom: 1px solid $color-blue-light;
     padding: 1rem 2rem;
     font-weight: 600;

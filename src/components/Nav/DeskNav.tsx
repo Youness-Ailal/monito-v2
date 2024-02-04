@@ -1,9 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import "./nav.scss";
+import logo from "/images/logo.svg";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoMdHeartEmpty } from "react-icons/io";
 
-import Cart from "../Cart";
+import Cart from "../../features/Cart";
 import CategoryNav from "./CategoryNav";
 
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
@@ -14,7 +15,7 @@ export default function DeskNav() {
       <NavigationMenu.List>
         <header className="header">
           <Link to="/">
-            <img src="images/logo.svg" alt="" className="header__logo" />
+            <img src={logo} alt="" className="header__logo" />
           </Link>
           <nav className="header__navigation">
             <ul className="header__list">

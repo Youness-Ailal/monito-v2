@@ -1,0 +1,16 @@
+@import "@/index.scss";
+
+.customers {
+  padding: 1rem !important;
+  &__slide {
+    height: 42rem;
+    max-width: 30rem;
+    border-radius: $radius-lg;
+    overflow: hidden;
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

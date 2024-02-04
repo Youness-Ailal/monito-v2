@@ -1,0 +1,402 @@
+@import "@/index.scss";
+
+.pets {
+  padding: 10rem;
+  @media (max-width: 1000px) {
+    padding: 3rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    row-gap: 5rem;
+    justify-items: center;
+    margin-top: 3rem;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    margin-bottom: 4rem;
+    margin-top: $section-space;
+  }
+  &__arrival {
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #12b886;
+  }
+
+  &__more-desk {
+    padding: 6rem 2rem;
+    button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+.pet {
+  cursor: pointer;
+  width: min(100%, 32rem);
+  height: 45rem;
+  // background-color: rgba(235, 251, 238, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: 0.3s;
+  box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.1);
+
+  &__heart {
+    cursor: pointer;
+    position: absolute;
+    color: #003459;
+    font-size: 3rem;
+    top: 5%;
+    right: 5%;
+    filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.8));
+  }
+  &__reed {
+    cursor: pointer;
+    position: absolute;
+    color: #ff6b6b;
+    font-size: 3rem;
+    top: 5%;
+    right: 5%;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.8));
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    word-break: keep-all;
+  }
+  &__image-container {
+    width: 95%;
+    height: 95%;
+    overflow: hidden;
+    align-self: center;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    position: relative;
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    transition: 0.5s;
+  }
+  &__text {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    gap: 1.58rem;
+    font-size: 1.4rem;
+  }
+  &__gene {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__male {
+    font-size: 2rem;
+    color: #339af0;
+  }
+  &__female {
+    font-size: 2rem;
+    color: #d6336c;
+  }
+  &__age {
+    span {
+      font-weight: 600;
+    }
+  }
+  &__price {
+    margin-top: 0.9rem;
+    font-size: 2.2em;
+    color: $color-green-dark;
+    font-weight: 500;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+  }
+  &__old-price {
+    color: #868e96;
+    font-size: 1.4rem;
+    text-decoration: line-through;
+    margin-top: -0.2rem;
+    transition: 0.3s;
+  }
+  &:hover &__cart {
+    color: #12b886;
+  }
+  &__pricing {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover i {
+      color: #20c997 !important;
+    }
+    &:hover .pet__price {
+      color: #20c997;
+    }
+  }
+  &__cart {
+    font-size: 4rem;
+    // color: #495057;
+    color: #003459;
+
+    transition: 0.3s;
+    border-radius: 1rem;
+    &:hover {
+      animation: carti 1.2s infinite ease;
+    }
+  }
+
+  &:hover {
+    background-color: #fff;
+  }
+  &:hover &__image {
+    transform: scale(1.04);
+  }
+}
+
+/***********/
+
+.con-like {
+  --red: rgb(250, 50, 80);
+  // position: relative;
+  width: 3rem;
+  height: 3rem;
+  top: 5%;
+  right: 5%;
+  position: absolute;
+  opacity: 0.8;
+}
+
+.con-like .like {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.con-like .checkmark {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.con-like .outline,
+.con-like .filled {
+  fill: var(--red);
+  position: absolute;
+}
+
+.con-like .filled {
+  animation: kfr-filled 0.8s;
+  display: none;
+}
+
+.con-like .celebrate {
+  position: absolute;
+  animation: kfr-celebrate 0.6s;
+  animation-fill-mode: forwards;
+  display: none;
+}
+
+.con-like .poly {
+  stroke: var(--red);
+  fill: var(--red);
+}
+
+.con-like .like:checked ~ .checkmark .filled {
+  display: block;
+}
+
+.con-like .like:checked ~ .checkmark .celebrate {
+  display: block;
+}
+
+@keyframes kfr-filled {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes kfr-celebrate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.peti {
+  border: 1px solid $color-grey-light-2;
+  border-radius: $radius-lg;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  &__image {
+    height: 55rem;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__remarks {
+    display: flex;
+    align-self: start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.4rem;
+    gap: 4rem;
+    row-gap: 2rem;
+    background-color: $color-green-light-2;
+    color: $color-blue-dark;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: $radius-lg;
+    &--mark {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    &--icon {
+      font-size: 2.6rem;
+    }
+  }
+  &__share {
+    display: flex;
+    gap: 4rem;
+    font-size: 2rem;
+    span {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: $color-blue-dark;
+    }
+
+    &--socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    &--social {
+      cursor: pointer;
+      font-size: 3.4rem;
+      color: $color-grey;
+      padding: 0.5rem;
+      transition: 0.2s;
+      &:hover {
+        color: $color-text;
+      }
+    }
+  }
+  &__right {
+    padding: 4rem;
+    @include flexCol();
+    gap: 4rem;
+    font-weight: 500;
+    @media (max-width: 600px) {
+      padding: 0;
+    }
+    &--top {
+      @include flexCol();
+      line-height: 1.4;
+    }
+    &--center {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+  }
+  &__id {
+    color: $color-grey;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  &__name {
+    color: $color-black;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  &__price {
+    margin-top: 2rem;
+    font-size: 3.2rem;
+    color: $color-blue;
+  }
+  &__right--bottom {
+    ul {
+      @include flexCol();
+      gap: 0rem;
+    }
+    li {
+      color: $color-grey;
+      display: grid;
+      padding: 1.4rem 0;
+      grid-template-columns: 1fr 1fr;
+      font-size: 1.6rem;
+      border-bottom: 1px solid $color-grey-light;
+    }
+  }
+}

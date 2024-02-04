@@ -7,11 +7,13 @@ type ButtonProps = {
   icon?: ReactNode;
   children?: ReactNode;
   styling?: "normal" | "overflow" | "expand";
+  placeIcon?: "right" | "left";
 } & ComponentPropsWithoutRef<"button">;
 function index({
   variant = "primary",
   styling = "normal",
   icon,
+  placeIcon = "left",
   children,
   ...props
 }: ButtonProps) {
@@ -34,7 +36,13 @@ function index({
   }
   return (
     <button className={cn("btn ", variant)} {...props}>
+      {icon && placeIcon === "left" && (
+        <span className="btn--icon">{icon}</span>
+      )}
       {children}
+      {icon && placeIcon === "right" && (
+        <span className="btn--icon">{icon}</span>
+      )}
     </button>
   );
 }

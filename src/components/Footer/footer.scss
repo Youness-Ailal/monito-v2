@@ -1,0 +1,141 @@
+@import "@/index.scss";
+.footer {
+  background-color: #c3fae8;
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+  margin-top: $section-space;
+  padding-top: 5rem;
+  &__container {
+    padding: 5rem;
+    @media (max-width: 500px) {
+      padding: 2rem;
+    }
+  }
+
+  &__sections {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    gap: 3rem;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #111;
+    padding: 1rem;
+    position: relative;
+
+    &:hover {
+      color: $color-blue-dark;
+      text-decoration: underline;
+    }
+  }
+  &__socials {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+  }
+  &__social {
+    cursor: pointer;
+    font-size: 3rem;
+  }
+  &__bottom {
+    margin-top: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__policy {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    a {
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__copyright {
+    font-size: 1.4rem;
+    a {
+      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.subscribe {
+  background-color: #003459;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  height: auto;
+  align-items: center;
+  gap: 1rem;
+  row-gap: 2rem;
+  border-radius: 1rem;
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    max-width: 32ch;
+    color: $color-white !important;
+    font-weight: 600;
+  }
+  &__form {
+    min-height: 10rem;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      gap: 1rem;
+      align-self: stretch;
+    }
+  }
+  &__email {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    border: 1px solid #adb5bd;
+    transition: 0.2s;
+    outline: none;
+    &:focus {
+      outline: none;
+      border: 1px solid $color-blue-dark;
+    }
+  }
+  &__button {
+    border-radius: 0.5rem;
+    padding: 1.2rem 3rem;
+    font-size: 1.6rem;
+    color: $color-white;
+    background-color: $color-blue;
+  }
+}

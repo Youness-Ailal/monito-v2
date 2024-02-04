@@ -1,11 +1,17 @@
+import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
-import { type ReactNode } from "react";
+import { useEffect, type ReactNode, useRef } from "react";
 
 function MainLayout({ children }: { children: ReactNode }) {
+  const navRef = useRef(null);
+  let prevOffsetY = window.scrollY;
+
   return (
     <>
       <Nav />
+      <div className="spacing"></div>
       {children}
+      <Footer />
     </>
   );
 }

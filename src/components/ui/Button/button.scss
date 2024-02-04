@@ -6,10 +6,13 @@
   align-items: center;
   gap: 1rem;
   overflow: hidden;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 100rem;
   cursor: pointer;
   transition: 0.2s;
+  &--icon {
+    font-size: 2.6rem;
+  }
 }
 .btn.primary {
   background-color: $color-blue;

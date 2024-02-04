@@ -24,11 +24,19 @@
   src: url("../public/fonts/Gilroy-Bold.otf");
   font-weight: 700 800;
 }
+@mixin flexCol() {
+  display: flex;
+  flex-direction: column;
+}
 
 $color-bg: #fff;
 $color-white: #fdfdfd;
+$color-black: #00171f;
 
 $color-text: #242b33;
+$color-grey: #667479;
+$color-grey-light: #e5e7eb;
+$color-grey-light-2: #f3f4f6;
 
 $color-blue: #003459;
 $color-blue-light: #005694;
@@ -44,6 +52,7 @@ $color-female: #d6336c;
 $color-green: #63e6be;
 $color-green-dark: #20c997;
 $color-green-light: #96f2d7;
+$color-green-light-2: #c4f8e8;
 
 $radius-tiny: 2px;
 $radius-sm: 4px;
@@ -52,7 +61,7 @@ $radius-lg: 10px;
 
 $shadow-base: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
 
-$section-space: 15vh;
+$section-space: 12rem;
 
 ::selection {
   background-color: rgba(32, 201, 151, 0.5);
@@ -153,8 +162,8 @@ button {
   color: $color-blue;
 }
 .heading-5 {
-  font-size: 1.5rem;
-  color: $color-blue;
+  font-size: 1.8rem;
+  color: $color-green-dark;
 }
 .paragraph {
   font-size: 1.8rem;
@@ -229,4 +238,68 @@ button {
   100% {
     transform: translateY(0);
   }
+}
+
+.offer {
+  width: 100dvw;
+  padding: 1rem;
+  text-align: center;
+  background-color: $color-blue;
+  color: $color-bg;
+  font-size: 1.6rem;
+}
+
+.section {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    margin-bottom: 4rem;
+    margin-top: $section-space;
+  }
+  &__arrival {
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #12b886;
+  }
+
+  &__more-desk {
+    padding: 6rem 2rem;
+    button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+.spacing {
+  margin-top: 12rem;
+}
+.section-header {
+  padding: 0;
+  margin: 3rem 0;
+}
+.button {
+  padding: 1rem 2.5rem;
+  font-size: 2rem;
+  color: $color-white;
+  font-weight: 400;
+  background-color: $color-blue;
+  border-radius: $radius-sm;
+  width: 100%;
+  transition: 0.2s;
+  &:hover {
+    background-color: $color-blue-dark;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: $color-grey-light;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $color-blue;
 }

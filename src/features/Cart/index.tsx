@@ -2,9 +2,15 @@ import { CiShoppingCart } from "react-icons/ci";
 import "./cart.scss";
 import { createPortal } from "react-dom";
 import CartOverview from "./CartOverview";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useCartSelector } from "@/store/hooks";
+import useInitialMount, { useFirstRender } from "@/hooks/useFirstRender";
 
-function Cart({ cartItems = 2 }) {
+function Cart() {
+  const { items } = useCartSelector(state => state.cart);
+  const cartItems = items.reduce((acc, curr) => acc + curr.quantity, 0);
+  const cart = useCartSelector(state => state.cart);
+
   const cartRef = useRef(null);
   function showCart() {
     const element = cartRef.current! as HTMLElement;
@@ -12,12 +18,18 @@ function Cart({ cartItems = 2 }) {
       item?.setAttribute("data-state", "open")
     );
   }
+
   function hideCart() {
     const element = cartRef.current! as HTMLElement;
     [...element.children].forEach(item =>
       item?.setAttribute("data-state", "closed")
     );
   }
+
+  const isFirstRender = useFirstRender();
+  useEffect(() => {
+    if (!isFirstRender) showCart();
+  }, [cart]);
   return (
     <>
       <button className="header__cart" onClick={showCart}>

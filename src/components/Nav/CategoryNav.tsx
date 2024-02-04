@@ -17,15 +17,13 @@ const CategoryNav = forwardRef<HTMLDivElement>(function CategoryNav(_, ref) {
               <div key={i} className="category__list">
                 <CategoryTitleLink
                   icon={<IoArrowForward />}
-                  to={`/${item.title.toLocaleLowerCase().replace(" ", "-")}`}>
+                  to={`/pets?category=${item.title}`}>
                   {item.title}
                 </CategoryTitleLink>
                 <ul>
                   {item.subLinks.map((link, i) => (
-                    <CategoryLink
-                      key={i}
-                      to={`/${link.toLocaleLowerCase().replace(" ", "-")}`}>
-                      {link}
+                    <CategoryLink key={i} to={`/pets/${link.id}`}>
+                      {link.title}
                     </CategoryLink>
                   ))}
                 </ul>
