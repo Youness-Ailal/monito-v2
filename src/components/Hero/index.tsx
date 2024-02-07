@@ -29,7 +29,12 @@ function Hero() {
             that can meet your needs!
           </p>
           <div className="hero__buttons">
-            <Button styling="overflow" icon={<IoArrowDownSharp />}>
+            <Button
+              onClick={() => {
+                window.scrollTo({ behavior: "smooth", top: 700 });
+              }}
+              styling="overflow"
+              icon={<IoArrowDownSharp />}>
               Explore More
             </Button>
             <Button variant="outline">

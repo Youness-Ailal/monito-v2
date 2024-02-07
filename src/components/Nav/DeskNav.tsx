@@ -2,7 +2,6 @@ import { Link, NavLink } from "react-router-dom";
 import "./nav.scss";
 import logo from "/images/logo.svg";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { IoMdHeartEmpty } from "react-icons/io";
 
 import Cart from "../../features/Cart";
 import CategoryNav from "./CategoryNav";
@@ -49,9 +48,9 @@ export default function DeskNav() {
             </ul>
           </nav>
           <div className="header__right">
-            <Link to="/wishlist" className="header__hurt">
+            {/* <Link to="/wishlist" className="header__hurt">
               <IoMdHeartEmpty />
-            </Link>
+            </Link> */}
             <Cart />
           </div>
         </header>

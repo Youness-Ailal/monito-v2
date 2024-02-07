@@ -40,7 +40,6 @@ export const PETS = [
     age: "2 months",
     price: "1,150 DH",
     oldPrice: "2,000 DH",
-
     vaccinated: "yes",
     microchip: "no",
     location: "Marrakesh",

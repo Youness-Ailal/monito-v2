@@ -1,0 +1,73 @@
+@import "@/index.scss";
+.contact {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  &__right {
+    padding: 3rem;
+    border-radius: $radius-md;
+    border: 1px solid $color-grey-light;
+  }
+  &__title {
+    font-size: 5rem;
+    color: $color-blue;
+    line-height: 1;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 4rem;
+    button {
+      margin-top: 2rem;
+    }
+  }
+  input,
+  textarea {
+    padding: 1.8rem;
+    font-size: 1.8rem;
+    border-radius: $radius-sm;
+    border: 1px solid $color-grey;
+    transition: 0.2s;
+    &:focus {
+      border: 1px solid transparent;
+      outline-offset: 0;
+      outline: 2px solid $color-blue-2 !important;
+    }
+  }
+  textarea {
+    resize: vertical;
+    min-height: 15rem;
+  }
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  &__link {
+    font-size: 2.5rem;
+    color: $color-blue-dark;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid $color-grey-light;
+    border-radius: $radius-md;
+    font-weight: 500;
+  }
+  &__icon {
+    background-color: $color-blue;
+    font-size: 2.6rem;
+    padding: 1.2rem;
+    border-radius: 100rem;
+    height: 8rem;
+    width: 8rem;
+    color: $color-white;
+  }
+}

@@ -1,7 +1,7 @@
 import { useCartDispatch } from "@/store/hooks";
 import { IMAGE_URL } from "@/utils/constants";
 import { LuTrash } from "react-icons/lu";
-import { addToCart, removeFromCart } from "./CartSlice";
+import { addToCart, dropFromCart, removeFromCart } from "./CartSlice";
 
 function CartItem({ item }) {
   const { id: productId, name, id, price, quantity } = item;
@@ -14,6 +14,9 @@ function CartItem({ item }) {
   function descreaseQty() {
     dispatch(removeFromCart(productId));
   }
+  function dropItem() {
+    dispatch(dropFromCart(productId));
+  }
   return (
     <div className="cart__item">
       <div className="cart__item--top">
@@ -22,7 +25,7 @@ function CartItem({ item }) {
           <span>#{id}</span>
           <p>{name}</p>
         </div>
-        <button>
+        <button onClick={dropItem}>
           <LuTrash className="cart__item--top--icon" />
         </button>
       </div>

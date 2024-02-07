@@ -15,7 +15,7 @@ function PetCard({ pet }) {
           alt={name}
           className="pet__image"
         />
-        <div className="con-like" onClick={e => e.stopPropagation()}>
+        {/* <div className="con-like" onClick={e => e.stopPropagation()}>
           <input title="like" type="checkbox" className="like" />
           <div className="checkmark">
             <svg
@@ -43,7 +43,7 @@ function PetCard({ pet }) {
               <polygon points="80,80 70,70" className="poly"></polygon>
             </svg>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="pet__text">
         <div className="pet__name">

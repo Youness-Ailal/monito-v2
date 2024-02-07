@@ -13,16 +13,24 @@ const CategoryNav = forwardRef<HTMLDivElement>(function CategoryNav(_, ref) {
       <div className="category__container">
         <div className="category__lists">
           {categoryLinks.map((item, i) => {
+            const urlPath =
+              item.title === "New Pets"
+                ? "pets"
+                : item.title === "Pet Food"
+                ? "products?type=food"
+                : "products?type=toy";
             return (
               <div key={i} className="category__list">
-                <CategoryTitleLink
-                  icon={<IoArrowForward />}
-                  to={`/pets?category=${item.title}`}>
+                <CategoryTitleLink icon={<IoArrowForward />} to={`/${urlPath}`}>
                   {item.title}
                 </CategoryTitleLink>
                 <ul>
                   {item.subLinks.map((link, i) => (
-                    <CategoryLink key={i} to={`/pets/${link.id}`}>
+                    <CategoryLink
+                      key={i}
+                      to={`/${link.id.startsWith("PD") ? "products" : "pets"}/${
+                        link.id
+                      }`}>
                       {link.title}
                     </CategoryLink>
                   ))}

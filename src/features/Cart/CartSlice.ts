@@ -1,3 +1,4 @@
+import { typePayloadAction } from "@reduxjs/toolkit";
 // import { ProductType } from "@/data/productsData";
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
@@ -23,7 +24,10 @@ const CartSlice = createSlice({
         item => item.id === action.payload.id
       );
       if (itemIndex < 0) {
-        state.items.push({ ...action.payload, quantity: 1 });
+        state.items.push({
+          ...action.payload,
+          quantity: action.payload.quantity,
+        });
       } else {
         state.items[itemIndex].quantity += action.payload.quantity;
       }
@@ -38,8 +42,11 @@ const CartSlice = createSlice({
         state.items[itemIndex].quantity -= 1;
       }
     },
+    dropFromCart(state, action: typePayloadAction<string>) {
+      state.items = state.items.filter(item => item.id !== action.payload);
+    },
   },
 });
 
 export default CartSlice.reducer;
-export const { addToCart, removeFromCart } = CartSlice.actions;
+export const { addToCart, removeFromCart, dropFromCart } = CartSlice.actions;

@@ -1,6 +1,6 @@
 export const categoryLinks = [
   {
-    title: "Popular",
+    title: "New Pets",
     id: "MO001",
     subLinks: [
       {
@@ -20,32 +20,32 @@ export const categoryLinks = [
         id: "MO588",
       },
       {
-        title: "Beagle Boo",
-        id: "MO542",
+        title: "Poodle", //
+        id: "MO502",
       },
       {
-        title: "Husky",
-        id: "MO007",
+        title: "Malamute", //
+        id: "MO512",
       },
       {
-        title: "Samoyed",
-        id: "MO008",
+        title: "Pembroke", //
+        id: "MO231",
       },
       {
-        title: "Labrador",
-        id: "MO009",
+        title: "Poodle Sepia", //
+        id: "MO102",
       },
       {
-        title: "Tosa",
-        id: "MO010",
+        title: "Pembroke Corgi",
+        id: "MO588",
       },
       {
-        title: "Dachshund",
-        id: "MO011",
+        title: "Pomeranian Brown",
+        id: "MO235",
       },
       {
-        title: "French Bulldog",
-        id: "MO012",
+        title: "Poodle",
+        id: "MO541",
       },
       {
         title: "Pomeranian Brown", //
@@ -54,62 +54,62 @@ export const categoryLinks = [
     ],
   },
   {
-    title: "Large Dog",
+    title: "Pet Food",
     id: "MO014",
     subLinks: [
       {
-        title: "Akita",
-        id: "MO015",
+        title: "Simply Nourish",
+        id: "PD002",
       },
       {
-        title: "Alaskan Malamute",
-        id: "MO016",
+        title: "Wellness®",
+        id: "PD018",
       },
       {
-        title: "Bernese Moutain",
-        id: "MO017",
+        title: "Ourish Source",
+        id: "PD005",
       },
       {
-        title: "Bloodhound",
-        id: "MO018",
+        title: "Feast Gravy",
+        id: "PD007",
       },
       {
-        title: "Bullmastiff",
-        id: "MO019",
+        title: "Rachael Ray",
+        id: "PD014",
       },
       {
-        title: "Cane Corso",
-        id: "MO020",
+        title: "Wellness",
+        id: "PD018",
       },
     ],
   },
   {
-    title: "Small Dog",
+    title: "Pet Toys",
     id: "MO021",
     subLinks: [
       {
-        title: "Poodle Tiny", //
-        id: "MO502",
+        title: "Wellness®", //
+        id: "PD003",
       },
       {
-        title: "Poodle", //
-        id: "MO102",
+        title: "Kong", //
+        id: "PD010",
       },
       {
-        title: "Poodle", //
-        id: "MO541",
+        title: "Multipet", //
+        id: "PD009",
       },
       {
-        title: "Chihuahua",
-        id: "MO025",
+        title: "Electronic Ball",
+        id: "PD006",
       },
       {
-        title: "Cocker Spaniel",
-        id: "MO026",
+        title: "Nylabone",
+        id: "PD004",
       },
       {
-        title: "Dachshund",
-        id: "MO027",
+        title: "Boosters",
+        id: "PD003",
       },
     ],
   },

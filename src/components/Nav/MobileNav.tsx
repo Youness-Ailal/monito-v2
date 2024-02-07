@@ -1,6 +1,5 @@
-import { IoMdHeartEmpty } from "react-icons/io";
 import { RiMenu2Fill } from "react-icons/ri";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Cart from "../../features/Cart";
 import { createPortal } from "react-dom";
 import { forwardRef, useRef } from "react";
@@ -28,9 +27,9 @@ function MobileNav() {
         <RiMenu2Fill />
       </button>
       <div className="header__right">
-        <Link to="/wishlist" className="header__hurt">
+        {/* <Link to="/wishlist" className="header__hurt">
           <IoMdHeartEmpty />
-        </Link>
+        </Link> */}
         <Cart />
       </div>
       {createPortal(
@@ -87,25 +86,25 @@ const MobileNavLinks = forwardRef<HTMLElement>(function MobileNavLinks(
           <li className="header__item-mobile">
             <NavLink
               onClick={onHideNav}
-              to="/popular-dogs"
+              to="/pets"
               className="header__link-mobile">
-              Popular
+              New Pets
             </NavLink>
           </li>
           <li className="header__item-mobile">
             <NavLink
               onClick={onHideNav}
-              to="/large-dogs"
+              to="/products?type=food"
               className="header__link-mobile">
-              Larg Dogs
+              Pet Food
             </NavLink>
           </li>
           <li className="header__item-mobile">
             <NavLink
               onClick={onHideNav}
-              to="/small-dogs"
+              to="/products?type=toy"
               className="header__link-mobile">
-              Small Dogs
+              Pet Toys
             </NavLink>
           </li>
         </ul>

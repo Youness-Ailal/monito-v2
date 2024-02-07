@@ -3,11 +3,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import WishList from "./pages/WishList";
+import WishList from "./pages/_WishList";
 import Pets from "./pages/Pets";
 import Pet from "./pages/Pet";
 import { ScrollToTop } from "./utils/helpers";
 import Product from "./pages/Product";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="wishlist" element={<WishList />} />
         <Route path="pets" element={<Pets />} />
         <Route path="pets/:id" element={<Pet />} />
+        <Route path="products" element={<Products />} />
         <Route path="products/:id" element={<Product />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

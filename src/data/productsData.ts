@@ -24,10 +24,10 @@ export const PRODUCTS: ProductType[] = [
   {
     id: "PD003",
     name: "Wellness® Bowl Boosters Simply Shreds", //
-    type: "Pet Toy",
+    type: "Pet Food",
     weight: "950g",
     brand: "Wellness CORE",
-    price: 190,
+    price: 90,
     gift: "Free Cat Food",
     description:
       "Wellness Bowl Boosters Simply Shreds are made with only five simple, natural ingredients including premium shredded protein and diced veggies. This grain-free, filler-free boost of pure protein is perfect for topping or snacking",
@@ -38,7 +38,7 @@ export const PRODUCTS: ProductType[] = [
     type: "Pet Toy",
     weight: "2.6kg",
     brand: "nylabone",
-    price: 390,
+    price: 210,
     gift: "Free Cat Food",
     description:
       "The Nylabone Power Chew Easy-Hold dog chew toy is specially designed with 4 paw grips that fit dogs's paws and allow for comfortable chewing from any angle. These robust chewing ends stand up to the most extreme chewers, keeping dogs engaged and occupied",
@@ -48,7 +48,8 @@ export const PRODUCTS: ProductType[] = [
     name: "ourish Source Adult Dog Food", //
     type: "Dog Food",
     weight: "10.88 kg",
-    price: 650,
+    brand: "Ourish",
+    price: 580,
     gift: "Free Toy & Free Shaker",
     description:
       "Simply Nourish Source Chicken Recipe Adult Dog Food includes a blend of superfoods like kale, pumpkin, blueberries and other naturally nutritious ingredients, each chosen for their role in supporting skin & coat, digestion and overall health",
@@ -58,8 +59,8 @@ export const PRODUCTS: ProductType[] = [
     name: "Electronic Ball Launcher", //
     type: "Pet Toy",
     weight: "4.5kg",
-    brand: "",
-    price: 390,
+    brand: "Joyhound",
+    price: 340,
     gift: "Free Toy & Free Shaker",
     description:
       "Our Joyhound Electronic Ball Launcher Dog Toy signals game-on for interactive fun for you and your dog. This toy allows you to play fetch with the push of a button and choose from three different settings",
@@ -70,7 +71,7 @@ export const PRODUCTS: ProductType[] = [
     type: "Cat Food",
     weight: "450g",
     brand: "Purina Fancy",
-    price: 290,
+    price: 70,
     gift: "Free Toy & Free Shaker",
     description:
       "Delight your cat with an exceptional mealtime experience with Purina Fancy Feast Gravy Lovers Chicken Hearts and Liver Feast Gourmet Cat Food in Wet Cat Food Gravy. Crafted in partnership with our expert nutritionists, this protein-rich",
@@ -81,7 +82,7 @@ export const PRODUCTS: ProductType[] = [
     type: "Dog Toy",
     weight: "900g",
     brand: "Multipet",
-    price: 70,
+    price: 90,
     gift: "Free Dog Food",
     description:
       "Show your furry friend how much you wuff them on Valentine's! The furry friend favorite is cute as ever. This adorable plush Lamb Chop toy has pink paws and ears and is holding a purple heart",
@@ -103,21 +104,21 @@ export const PRODUCTS: ProductType[] = [
     type: "Dog Food",
     weight: "400g",
     brand: "Rachael Ray",
-    price: 180,
+    price: 85,
     gift: "Free Dog Toy",
     description:
       "Rachael Ray Nutrish Real Beef, Pea & Brown Rice Recipe Dry Dog Food, is a delicious, super premium dog food recipe made the Rachael Ray way - with lots of love and only the best",
   },
   {
     id: "PD018",
-    name: "Wellness Core Hearty Cuts",
-    type: "Dog Food",
+    name: "Hill Science Weight Cat Food", //
+    type: "Cat Food",
     weight: "1.3kg",
-    brand: "Wellness",
-    price: 480,
-    gift: "Free Dog Toy",
+    brand: "Hill Science",
+    price: 280,
+    gift: "Free Cat Toy",
     description:
-      "Treat your dog to the delicious flavor and nutritional elements in Wellness CORE Hearty Cuts Natural Grain-Free Chicken & Turkey Recipe Dog Food. Your dog will love the flavor of chicken and turkey set in delicious gravy",
+      "Treat your cat to the delicious flavor and nutritional elements in Wellness CORE Hearty Cuts Natural Grain-Free Chicken & Turkey Recipe Dog Food. Your dog will love the flavor of chicken and turkey set in delicious gravy",
   },
 ];
 export type ProductType = {
@@ -125,8 +126,8 @@ export type ProductType = {
   name: string;
   type: string;
   weight: string;
+  brand: string;
   price: number;
-  quantity: number;
   gift: string;
   description: string;
 };

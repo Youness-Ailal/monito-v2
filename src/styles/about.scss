@@ -1,0 +1,23 @@
+@import "@/index.scss";
+.about {
+  margin-top: 5rem;
+  &__title {
+    font-size: 4rem;
+    color: $color-blue;
+  }
+  p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    font-weight: 500;
+    color: $color-text;
+  }
+  &__paragraphs {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    span {
+      color: $color-blue-light;
+    }
+  }
+}

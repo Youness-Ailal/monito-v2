@@ -1,0 +1,39 @@
+@import "@/index.scss";
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+  color: $color-text;
+  font-weight: 500;
+  label {
+    cursor: pointer;
+  }
+  input {
+    appearance: none;
+    background-color: $color-white;
+    margin: 0;
+    font: inherit;
+    color: $color-grey;
+    width: 2rem;
+    aspect-ratio: 1;
+    border: 0.15rem solid $color-grey;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    &::before {
+      content: "";
+      height: 1.1rem;
+      width: 1.1rem;
+      border-radius: $radius-tiny;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      background-color: $color-blue;
+    }
+    &:checked::before {
+      transform: scale(1);
+    }
+  }
+}

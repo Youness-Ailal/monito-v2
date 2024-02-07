@@ -1,9 +1,10 @@
 import { IoArrowForward } from "react-icons/io5";
 import Button from "../ui/Button";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 //@ts-ignore
-function SectionHeader({ title1, title2 }) {
+function SectionHeader({ title1, title2, path }) {
   const isMobile = useMediaQuery({
     query: "(max-width:500px)",
   });
@@ -15,9 +16,14 @@ function SectionHeader({ title1, title2 }) {
       </div>
       <div className="section__right">
         {!isMobile && (
-          <Button variant="outline" styling="expand" icon={<IoArrowForward />}>
-            View more
-          </Button>
+          <Link to={path}>
+            <Button
+              variant="outline"
+              styling="expand"
+              icon={<IoArrowForward />}>
+              View more
+            </Button>
+          </Link>
         )}
       </div>
     </div>

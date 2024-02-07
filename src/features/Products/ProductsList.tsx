@@ -1,16 +1,13 @@
-import { PRODUCTS } from "@/data/productsData";
-import Container from "../../components/ui/Container";
 import "./products.scss";
 import ProductCard from "./ProductCard";
-function ProductsList({ limit = 8 }) {
+import { ProductType } from "@/data/productsData";
+function ProductsList({ products }: { products: ProductType[] }) {
   return (
-    <Container>
-      <div className="products__container">
-        {PRODUCTS.slice(0, limit).map(item => (
-          <ProductCard key={item.id} product={item} />
-        ))}
-      </div>
-    </Container>
+    <div className="products__container">
+      {products.map(item => (
+        <ProductCard key={item.id} product={item} />
+      ))}
+    </div>
   );
 }
 

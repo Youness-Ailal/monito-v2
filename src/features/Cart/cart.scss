@@ -2,7 +2,7 @@
 .header {
   &__cart {
     cursor: pointer;
-    font-size: 4rem;
+    font-size: 4.6rem;
     justify-self: end;
     color: $color-blue;
     position: relative;
@@ -95,6 +95,20 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
+    }
+  }
+  &__empty {
+    font-size: 3rem;
+    color: $color-text;
+    font-weight: 500;
+    margin-block: auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &--icon {
+      height: 12rem;
     }
   }
 }

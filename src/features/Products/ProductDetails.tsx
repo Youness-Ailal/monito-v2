@@ -45,6 +45,7 @@ function ProductDetails() {
     setQuantity(prev => Math.max(1, prev - 1));
   }
   function handleAddItem() {
+    if (!productId || !name || !quantity || !price) return;
     dispatch(
       addToCart({
         id: productId,
