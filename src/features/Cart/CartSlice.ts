@@ -41,7 +41,7 @@ const CartSlice = createSlice({
         state.items[itemIndex].quantity -= 1;
       }
     },
-    dropFromCart(state, action: typePayloadAction<string>) {
+    dropFromCart(state, action: PayloadAction<string>) {
       state.items = state.items.filter(item => item.id !== action.payload);
     },
   },
