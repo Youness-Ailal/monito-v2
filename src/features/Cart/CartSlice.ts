@@ -1,4 +1,3 @@
-import { typePayloadAction } from "@reduxjs/toolkit";
 // import { ProductType } from "@/data/productsData";
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 

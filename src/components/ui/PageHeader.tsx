@@ -1,3 +1,4 @@
+//@ts-ignore
 function PageHeader({ src, title }) {
   return (
     <div

@@ -2,7 +2,7 @@ import { useCartDispatch } from "@/store/hooks";
 import { IMAGE_URL } from "@/utils/constants";
 import { LuTrash } from "react-icons/lu";
 import { addToCart, dropFromCart, removeFromCart } from "./CartSlice";
-
+//@ts-ignore
 function CartItem({ item }) {
   const { id: productId, name, id, price, quantity } = item;
   const dispatch = useCartDispatch();

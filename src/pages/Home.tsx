@@ -8,21 +8,13 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import ProductsList from "@/features/Products/ProductsList";
 import Footer from "@/components/Footer";
 
-import { IoArrowForward } from "react-icons/io5";
-import Button from "../components/ui/Button";
 //@ts-ignore
 import { shuffle } from "lodash";
 import { PETS } from "@/data/petsData";
 import { PRODUCTS } from "@/data/productsData";
-import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom";
 const petsList = shuffle(PETS.slice(0, 8));
 const products = PRODUCTS.slice(0, 8);
 function Home() {
-  const isMobile = useMediaQuery({
-    query: "(max-width:500px)",
-  });
-
   return (
     <>
       {/* <div className="offer">
@@ -42,18 +34,6 @@ function Home() {
         />
 
         <ProductsList products={products} />
-        {/* {isMobile && (
-          <Container>
-            <Link to={"/products"} className="pets__more-desk">
-              <Button
-                variant="outline"
-                styling="expand"
-                icon={<IoArrowForward />}>
-                View more
-              </Button>
-            </Link>
-          </Container>
-        )} */}
       </Container>
       <HeroSecond />
       <Container>
@@ -63,18 +43,6 @@ function Home() {
           path={"/pets"}
         />
         <PetsList petsList={petsList} />
-        {/* {isMobile && (
-          <Container>
-            <Link to={"/pets"} className="pets__more-desk">
-              <Button
-                variant="outline"
-                styling="expand"
-                icon={<IoArrowForward />}>
-                View more
-              </Button>
-            </Link>
-          </Container>
-        )} */}
       </Container>
       <Footer />
     </>

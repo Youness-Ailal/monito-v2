@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import CartOverview from "./CartOverview";
 import { useEffect, useRef } from "react";
 import { useCartSelector } from "@/store/hooks";
-import useInitialMount, { useFirstRender } from "@/hooks/useFirstRender";
+import { useFirstRender } from "@/hooks/useFirstRender";
 
 function Cart() {
   const { items } = useCartSelector(state => state.cart);
