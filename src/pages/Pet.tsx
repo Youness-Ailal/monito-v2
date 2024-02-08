@@ -10,7 +10,7 @@ import MainLayout from "@/layouts/MainLayout";
 import { shuffle } from "lodash";
 
 function Pet() {
-  const petsList = shuffle(PETS);
+  const petsList = shuffle(PETS).slice(0, 4);
 
   return (
     <MainLayout>
@@ -21,8 +21,12 @@ function Pet() {
         <Customers />
       </Container>
       <Container>
-        <SectionHeader title1={"Whats new?"} title2={"See more puppies"} />
-        <PetsList petsList={petsList} limit={4} />
+        <SectionHeader
+          path={"/pets"}
+          title1={"Whats new?"}
+          title2={"See more puppies"}
+        />
+        <PetsList petsList={petsList} />
       </Container>
     </MainLayout>
   );

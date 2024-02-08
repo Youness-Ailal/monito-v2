@@ -1,7 +1,6 @@
 import Container from "@/components/ui/Container";
 import Header from "@/components/ui/Header";
 import MainLayout from "@/layouts/MainLayout";
-import Products from "./Products";
 import PetsList from "@/features/Pets/PetsList";
 import PetsFilters from "@/features/Pets/PetsFilters";
 import { PETS } from "@/data/petsData";
