@@ -1,5 +1,9 @@
 # React + TypeScript + Vite
 
+🌐 Live Website : [https://monito.ailal.dev/](https://monito.ailal.dev/)
+
+this is v2 because v1 was plain HTML and CSS only
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
